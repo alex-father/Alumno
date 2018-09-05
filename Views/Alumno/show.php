@@ -1,8 +1,6 @@
-
-
 <div class="container">
 	<h2>Lista Alumnos</h2>
-	<form class="form-inline" action="?controller=alumno&action=search" method="POST">
+	<form class="form-inline" action="?controller=alumno&action=search" method="post">
 		<div class="form-group row">
 			<div class="col-xs-4">
 				<input class="form-control" id="id" name="id" type="text" placeholder="Busqueda por ID">
@@ -10,7 +8,7 @@
 		</div>
 		<div class="form-group row">
 			<div class="col-xs-4">
-				<button type="submit" class="btn btn-primary" ><span class="glyphicon glyphicon-search"> </span> Buscar</button>
+				<button type="submit" class="btn btn-primary" ></span> Buscar</button>
 			</div>
 		</div>
 	</form>
@@ -18,10 +16,10 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Id</th>
+					<th>ID</th>
 					<th>Nombres</th>
 					<th>Apellidos</th>
-					<th>Direcc&iacuteon</th>
+					<th>Direccion</th>
 					<th>Estado</th>
 					<th>Accion</th>
 				</tr>
@@ -30,7 +28,7 @@
 
 					
 					<tr>
-						<td> <a href="?controller=alumno&&action=updateshow&&id=<?php  echo $alumno->getId()?>"> <?php echo $alumno->getId(); ?></a> </td>
+						<td> <a href="?controller=alumno&&action=updateshow&&idAlumno=<?php  echo $alumno->getId()?>"> <?php echo $alumno->getId(); ?></a> </td>
 						<td><?php echo $alumno->getNombres(); ?></td>
 						<td><?php echo $alumno->getApellidos(); ?></td>
 						<td><?php echo $alumno->getDireccion(); ?></td>

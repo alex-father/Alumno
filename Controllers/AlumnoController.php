@@ -20,11 +20,11 @@ class UsuarioController
 
 	function save(){
 		if (!isset($_POST['estado'])) {
-			$estado="off";
+			$estado="of";
 		}else{
 			$estado="on";
 		}
-		$alumno= new Alumno(null, $_POST['nombres'],$_POST['apellidos'],$_POST['direccion'],$_POST['estado']);
+		$alumno= new Alumno(null, $_POST['nombres'],$_POST['apellidos'],$_POST['direccion'],$estado);
 
 		Alumno::save($alumno);
 		$this->show();
@@ -37,17 +37,19 @@ class UsuarioController
 	}
 
 	function updateshow(){
-		$id=$_GET['id'];
+		$id=$_GET['idAlumno'];
 		$alumno=Alumno::searchById($id);
 		require_once('Views/Alumno/updateshow.php');
 	}
 
 	function update(){
-		$alumno = new Alumno($_POST['id'],$_POST['nombres'],$_POST['apellidos'],$_POST['direccion'],$_POST['estado']);
+		/*$alumno = new Alumno($_POST['id'],$_POST['nombres'],$_POST['apellidos'],$_POST['direccion'],$_POST['estado']);
 		Alumno::update($alumno);
-		$this->show();
-	}
+		$this->show();*/
+		
+		require_once('Views/Alumno/updateshow.php');
 
+	}
 	function delete(){
 		$id=$_GET['id'];
 		Alumno::delete($id);
@@ -59,8 +61,7 @@ class UsuarioController
 			$id=$_POST['id'];
 			$alumno=Alumno::searchById($id);
 			$listaAlumnos[]=$alumno;
-			//var_dump($id);
-			//die();
+			
 			require_once('Views/Alumno/show.php');
 		} else {
 			$listaAlumnos=Alumno::all();
