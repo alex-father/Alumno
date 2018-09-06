@@ -1,7 +1,5 @@
-
-
 <div class="container">
-	<h2>Lista Alumnos</h2>
+	<h2 align="center">Lista de alumnos</h2>
 	<form class="form-inline" action="?controller=alumno&&action=search" method="POST">
 		<div class="form-group row">
 			<div class="col-xs-4">
@@ -10,7 +8,7 @@
 		</div>
 		<div class="form-group row">
 			<div class="col-xs-4">
-				<button type="submit" class="btn btn-primary" ><span class="glyphicon glyphicon-search"> </span> Buscar</button>
+				<button type="submit" class="btn btn-primary" >Buscar</button>
 			</div>
 		</div>
 	</form>
@@ -18,10 +16,10 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Id</th>
+					<th>ID</th>
 					<th>Nombres</th>
 					<th>Apellidos</th>
-					<th>Direcc&iacuteon</th>
+					<th>Direcci&oacuten</th>
 					<th>Estado</th>
 					<th>Accion</th>
 				</tr>

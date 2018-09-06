@@ -1,5 +1,5 @@
 <div class="container">
-  <h2>Registro de Alumno</h2>
+  <h2 align="center">Registro de Alumno</h2>
   <form action="?controller=alumno&&action=save" method="POST">
     <div class="form-group">
       <label for="text">Nombres:</label>
@@ -7,12 +7,12 @@
     </div>
 
     <div class="form-group">
-      <label for="text"></label>
+      <label for="text">Apellidos:</label>
       <input type="text" name="apellidos" class="form-control" placeholder="Ingrese su apellido">
     </div>
 
     <div class="form-group">
-      <label for="text">Direcc&iacuteon</label>
+      <label for="text">Direcci&oacuten</label>
       <input type="text" name="direccion" class="form-control" placeholder="Ingrese su direccion">
     </div>
 

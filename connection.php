@@ -1,8 +1,6 @@
 <?php 
 error_reporting(E_ALL ^ E_NOTICE);
-/**
-* 
-*/
+
 class Db
 {
 	private static $instance=NULL;
