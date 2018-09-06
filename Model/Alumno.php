@@ -11,13 +11,13 @@ class Alumno
 	private $estado;
 
 	
-	function __construct($id, $nombres,$apellidos, $direccion, $estado)
+	function __construct($id, $nombres,$apellidos,$direccion,$estado)
 	{
 		$this->setId($id);
 		$this->setNombres($nombres);
 		$this->setApellidos($apellidos);
 		$this->setDireccion($direccion);
-		$this->setEstado($estado);		
+		$this->setEstado($estado);
 	}
 
 	public function getId(){
@@ -44,13 +44,13 @@ class Alumno
 		$this->apellidos = $apellidos;
 	}
 
-	public function getDireccion(){
-		return $this->direccion;
-	}
+    public function getDireccion(){
+       return $this->direccion;
+    }
 
-	public function setDireccion($direccion){
-		$this->direccion = $direccion;
-	}
+    public function setDireccion($direccion){
+        $this->direccion = $direccion;
+    }
 
 	public function getEstado(){
 
@@ -64,7 +64,7 @@ class Alumno
 		} elseif(strcmp($estado, '1')==0) {
 			$this->estado='checked';
 		}elseif (strcmp($estado, '0')==0) {
-			$this->estado='of';
+			$this->estado='off';
 		}else {
 			$this->estado=0;
 		}
@@ -73,8 +73,8 @@ class Alumno
 
 	public static function save($alumno){
 		$db=Db::getConnect();
-		//var_dump($alumno);
-		//die();
+		var_dump($alumno);
+		die();
 		
 
 		$insert=$db->prepare('INSERT INTO alumno VALUES (NULL, :nombres,:apellidos,:direccion,:estado)');
@@ -115,7 +115,7 @@ class Alumno
 
 	public static function update($alumno){
 		$db=Db::getConnect();
-		$update=$db->prepare('UPDATE alumno SET nombres=:nombres, apellidos=:apellidos, direccion=:direccion,estado=:estado WHERE id=:id');
+		$update=$db->prepare('UPDATE alumno SET nombres=:nombres, apellidos=:apellidos, direccion=:direccion, estado=:estado WHERE id=:id');
 		$update->bindValue('nombres', $alumno->getNombres());
 		$update->bindValue('apellidos',$alumno->getApellidos());
 		$update->bindValue('direccion',$alumno->getDireccion());

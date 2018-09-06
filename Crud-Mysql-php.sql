@@ -26,6 +26,7 @@ CREATE TABLE `alumno` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombres` varchar(255) DEFAULT NULL,
   `apellidos` varchar(255) DEFAULT NULL,
+  `direccion` varchar(255) DEFAULT NULL,
   `estado` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
@@ -37,7 +38,7 @@ CREATE TABLE `alumno` (
 
 LOCK TABLES `alumno` WRITE;
 /*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
-INSERT INTO `alumno` VALUES (1,'Elivar Oswaldo','Largo Rios','1'),(5,'Juan','Vargas','1');
+INSERT INTO `alumno` VALUES (1,'Elivar Oswaldo','Largo Rios','Guastatoya el Progreso','1'),(5,'Juan','Vargas','Sanarate el Progreso','1');
 /*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
