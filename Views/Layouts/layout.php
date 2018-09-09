@@ -11,7 +11,7 @@
 	
 </head>
 <body>
-	<div class='conteiner'>
+	<div class='container'>
 		<div class ='page-header'>
 	
 		<?php 

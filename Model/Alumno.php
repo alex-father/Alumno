@@ -1,7 +1,4 @@
 <?php 
-/**
-* 
-*/
 class Alumno
 {
 	private $id;
@@ -73,8 +70,8 @@ class Alumno
 
 	public static function save($alumno){
 		$db=Db::getConnect();
-		var_dump($alumno);
-		die();
+		//var_dump($alumno);
+		//die();
 		
 
 		$insert=$db->prepare('INSERT INTO alumno VALUES (NULL, :nombres,:apellidos,:direccion,:estado)');

@@ -1,8 +1,8 @@
 <div class="container">
-	<h2 align="center">Lista de alumnos</h2>
+	<h2>Lista Alumnos</h2>
 	<form class="form-inline" action="?controller=alumno&&action=search" method="POST">
 		<div class="form-group row">
-			<div class="col-xs-4">
+			<div  class="col-xs-4">
 				<input class="form-control" id="id" name="id" type="text" placeholder="Busqueda por ID">
 			</div>
 		</div>
@@ -21,7 +21,7 @@
 					<th>Apellidos</th>
 					<th>Direcci&oacuten</th>
 					<th>Estado</th>
-					<th>Accion</th>
+					<th>Acci&oacuten</th>
 				</tr>
 				<tbody>
 					<?php foreach ($listaAlumnos as$alumno) {?>
